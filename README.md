@@ -9,7 +9,7 @@ Hands-on workshop examples for **MATLAB Online**, using MATLAB Live Scripts and 
 - Sign in to MATLAB Online with your MathWorks account.
 - Use MATLAB **R2026b or later** for the guided Gage R&R Analyzer and DOE Explorer app activities.
 - Ensure your account has access to **Statistics and Machine Learning Toolbox**. MATLAB Online availability and toolbox access depend on your license.
-- The repository includes all CSV data needed for the two demos.
+- The repository includes all CSV data needed for the workshop activities.
 
 ## Start in MATLAB Online
 
@@ -21,7 +21,7 @@ Hands-on workshop examples for **MATLAB Online**, using MATLAB Live Scripts and 
 
 The agent prompts are discussion prompts for an AI assistant; the scripts themselves do not connect to an AI service.
 
-**Download alternative:** On GitHub, choose **Code > Download ZIP**, extract it, and upload the two `.mlx` files and the entire `data` folder into one folder in MATLAB Drive. Open that folder in MATLAB Online before running a demo.
+**Download alternative:** On GitHub, choose **Code > Download ZIP**, extract it, and upload the three `.mlx` files and the entire `data` folder into one folder in MATLAB Drive. Open that folder in MATLAB Online before running a demo.
 
 ## Workshop demos
 
@@ -29,6 +29,8 @@ The agent prompts are discussion prompts for an AI assistant; the scripts themse
 | --- | --- | --- |
 | 01 - Gage R&R for material testing | [01_GageRR_MaterialTesting.mlx](01_GageRR_MaterialTesting.mlx) | [Open Demo 01 in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=KantikaAscendas/PTTGC-Agentic-AI-Workshop-Demo-Pack&file=01_GageRR_MaterialTesting.mlx) |
 | 02 - DOE for polymer pellet development | [02_DOE_PolymerPellet.mlx](02_DOE_PolymerPellet.mlx) | [Open Demo 02 in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=KantikaAscendas/PTTGC-Agentic-AI-Workshop-Demo-Pack&file=02_DOE_PolymerPellet.mlx) |
+
+| Manufacturing analytics - Try It | [01_Try_It_Manufacturing_Analytics.mlx](01_Try_It_Manufacturing_Analytics.mlx) | [Open Manufacturing Analytics in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=KantikaAscendas/PTTGC-Agentic-AI-Workshop-Demo-Pack&file=01_Try_It_Manufacturing_Analytics.mlx) |
 
 ### Demo 01 - Gage R&R for material testing
 
@@ -58,6 +60,18 @@ Data: [data/polymer_pellet_doe.csv](data/polymer_pellet_doe.csv)
 
 Launch the app from **Apps**, or enter `doeExplorer` in the Command Window. Follow the Live Script's guided design activity; use the supplied table for the code-based analysis.
 
+### Manufacturing analytics and predictive maintenance - Try It
+
+Open [01_Try_It_Manufacturing_Analytics.mlx](01_Try_It_Manufacturing_Analytics.mlx) for a beginner hands-on activity covering data quality, equipment trends, product-quality regression, and equipment-condition classification.
+
+Data: [data/synthetic_manufacturing_sensor_data.csv](data/synthetic_manufacturing_sensor_data.csv), already included in the repository.
+
+Set Current Folder to the repository root. The Live Script intentionally contains commented example code and blank exercise sections. Follow the instructions and screenshots to import the CSV and complete the exercises; running all sections alone will not complete the activity. Uncomment example lines when you want to run them, or use the corresponding app workflow.
+
+Use **Regression Learner** with `MeltFlowIndex_g_10min` as response, and **Classification Learner** with `ConditionLabel` as response. Follow the predictor exclusions in the Live Script. It also suggests Data Cleaner and, if available, Time Series Anomaly Detector. App availability depends on your MATLAB release and product access.
+
+The Live Script mentions a solution answer key; that solution is not included in this customer repository. The synthetic condition labels illustrate classification and are not validated failure predictions.
+
 ## Repository contents
 
 ```text
@@ -65,14 +79,16 @@ PTTGC-Agentic-AI-Workshop-Demo-Pack/
 |-- README.md
 |-- 01_GageRR_MaterialTesting.mlx
 |-- 02_DOE_PolymerPellet.mlx
+|-- 01_Try_It_Manufacturing_Analytics.mlx
 `-- data/
     |-- gage_rr_material_testing.csv
     |-- polymer_pellet_doe.csv
     |-- pellet_quality_spc.csv
-    `-- catalyst_support_life.csv
+    |-- catalyst_support_life.csv
+    `-- synthetic_manufacturing_sensor_data.csv
 ```
 
-The complete source data folder is included. The SPC and catalyst-life CSV files are additional workshop datasets; this repository currently contains Live Scripts for Demos 01 and 02.
+The complete source data folder is included. The SPC and catalyst-life CSV files are additional workshop datasets; this repository contains the Gage R&R and DOE Live Scripts plus the Manufacturing Analytics Try It activity.
 
 ## Troubleshooting
 
